@@ -108,23 +108,25 @@ $(document).ready(() => {
         }
     }
 
+    
+    $("#name").keyup(function(){
+        validarNombre($(this))
+    });
+
+    $("#prefijo").keyup(function(){
+        validarPrefijo($(this));
+    });
+
+    $("#telefono").keyup(function(){
+        validarTelefono($(this), $("#prefijo"))
+    });
+
+    $("#correo").keyup(function(){
+        validarEmail($(this))
+    });
+    
     //Validación al hacer click en siguiente
-    siguiente_paso_1.click(()=>{
-        $("#name").keyup(function(){
-            validarNombre($(this))
-        });
-
-        $("#prefijo").keyup(function(){
-            validarPrefijo($(this));
-        });
-
-        $("#telefono").keyup(function(){
-            validarTelefono($(this), $("#prefijo"))
-        });
-
-        $("#correo").keyup(function(){
-            validarEmail($(this))
-        });
+    siguiente_paso_1.click(()=>{    
         if (validarNombre($("#name")) && validarPrefijo($("#prefijo")) && validarTelefono($("#telefono"), $("#prefijo")) && validarEmail($("#correo"))) {
             let current = $(".form-section.current");
             let siguiente = current.next();
@@ -199,17 +201,19 @@ $(document).ready(() => {
             return true;
         }
     }
+    
+    $("#date").keyup(function(){
+        validarFecha($(this));
+    });
+    $("#time").keyup(function(){
+        validarHora($(this));
+    });
+    $("#people").keyup(function(){
+        validarPersonas($(this));
+    });
 
     siguiente_paso_2.click(()=>{
-        $("#date").keyup(function(){
-            validarFecha($(this));
-        });
-        $("#time").keyup(function(){
-            validarHora($(this));
-        });
-        $("#people").keyup(function(){
-            validarPersonas($(this));
-        });
+        
         if (validarFecha($("#date")) && validarHora($("#time")) && validarPersonas($("#people"))) {
             let current = $(".form-section.current");
             let siguiente = current.next();
