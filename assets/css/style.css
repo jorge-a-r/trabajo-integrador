@@ -1,0 +1,7 @@
+.form-section{
+    display: none;
+}
+
+.current{
+    display:flex;
+}
