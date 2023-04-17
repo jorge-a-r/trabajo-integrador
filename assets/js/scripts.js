@@ -67,10 +67,12 @@ $(document).ready(() => {
             3757,3758,376,3772,3773,3774,3775,3777,3781,3782,3786,379,380,381,3821,3825,3826,3827,383,3832,3835,3837,3838,
             3841,3843,3844,3845,3846,385,3854,3855,3856,3857,3858,3861,3862,3863,3865,3867,3868,3869,387,3873,3876,3877,
             3878,388,3885,3886,3887,3888,3891,3892,3894];
-        
-        console.log(prefijos.includes(Number(element.val())));
 
-        if(!prefijos.includes(Number(element.val()))){
+        const prefijos_string = prefijos.map(prefix => String(prefix));
+        
+        console.log(prefijos_string.includes(element.val()));
+
+        if(!prefijos_string.includes(element.val())){
             element.focus();
             element.next().text("El prefijo no es válido");
             return;
