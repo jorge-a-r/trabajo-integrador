@@ -1653,3 +1653,13 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+.btn{
+  font-size: 14px;
+  padding: 8px 20px;
+}
+
+.btn-danger{
+  background-color: #ce1212;
+  border: none;
+}

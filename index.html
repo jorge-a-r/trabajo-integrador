@@ -143,12 +143,19 @@
               <!-- Paso 1 -->
               <div class="row py-4 gy-4 form-section current">
                 <h5>Datos personales</h5>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-4">
+                  <label for="name">Nombre:</label>
                   <input type="text" class="form-control rounded-0 p-3" name="name" id="name" placeholder="Tu Nombre">
                   <div id="validar-name" class="validate small text-danger"></div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                  <input type="text" class="form-control rounded-0 p-3" name="telefono" id="telefono" placeholder="Número de telefono/celular">
+                <div class="col-lg-4 col-md-4">
+                  <label for="prefijo">Prefijo telef.;</label>
+                  <input type="number" name="prefijo" id="prefijo" min="11" max="3894" class="form-control rounded-0 p-3" placeholder="Prefijo">
+                  <div id="validar-prefijo" class="validate small text-danger"></div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                  <label for="telefono">Número:</label>
+                  <input type="number" class="form-control rounded-0 p-3" name="telefono" id="telefono" placeholder="Número de telefono/celular">
                   <div id="validar-telefono" class="validate small text-danger"></div>
                 </div>
                 <div class="col-lg-12 col-md-12">
